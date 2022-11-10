@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { MuscleGroups, Exercises, User } = require('../models');
+const { Content, User } = require('../models');
 
 // GET all data for homepage
 router.get('/', async (req, res) => {
@@ -58,6 +58,21 @@ router.get('/register', async (req, res) => {
     });
   } catch (err) {
     console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// get all posts for homepage
+router.get('/', async (req, res) => {
+  try {
+    const contentData = await Content.findAll({
+      include: [User],
+    });
+
+    const content = postData.map((content) => content.get({ plain: true }));
+
+    res.render('all-content', { content });
+  } catch (err) {
     res.status(500).json(err);
   }
 });

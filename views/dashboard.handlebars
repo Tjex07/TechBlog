@@ -5,29 +5,35 @@
     <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-form u-login-control u-form-1">
             <form action="#" method="POST"
-                class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form login-form"
+                class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form new-content-form"
                 source="custom" name="form" style="padding: 10px;">
                 <div class="u-form-group u-form-name">
                     <label for="username-a30d" class="u-label">Title *</label>
-                    <input type="text" for="title" id="email-login" name="email"
+                    <input type="text" for="title" id="content-title" name="email"
                         class="u-border-grey-30 u-input u-input-rectangle u-input-1" required="">
                 </div>
+                <form action="#" method="POST"
+                class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form content-body"
+                source="custom" name="form" style="padding: 10px;">
                 <div class="u-form-group u-form-password">
                     <label for="password-a30d" class="u-label">Content *</label>
-                    <input type="text password" for="Content" id="password-login" name="password"
+                    <input type="text password" for="Content" id="content-body" name="password"
                         class="u-border-grey-30 u-input u-input-rectangle u-input-2" required="">
                     <div class="form-group">
 
                     </div>
-                    <form id="new-content-form" class="card-body"></form>
+                    <form action="#" method="POST"
+                class="u-clearfix u-form-custom-backend u-form-spacing-10 u-form-vertical u-inner-form new-content-form"
+                source="custom" name="form" style="padding: 10px;">
                     <div class="u-align-left u-form-group u-form-submit">
                        
                         <a href="#" class="u-btn u-btn-submit u-button-style u-btn-1">Create Content!</a>
                         <input type="submit" value="submit" class="u-form-control-hidden">
-
+                        </form>
+  </form>
                     </div>
 
 
 
 
-                    <script src="js/comment.js"></script>
+                    <script src="js/content.js"></script>
