@@ -7,8 +7,6 @@ Content.init(
   {
     title: DataTypes.STRING,
     body: DataTypes.STRING,
-    min: 5,
-    max: 256,
   },
   {
     sequelize
